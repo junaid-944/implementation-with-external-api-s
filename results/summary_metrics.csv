@@ -1,0 +1,4 @@
+strategy,total_tasks,tasks_correct,success_rate,avg_execution_time,std_execution_time,avg_step_count,std_step_count,avg_tool_calls,total_tool_calls
+Plan-and-Solve,6,4,66.7,16.889,14.398484656379644,15.7,11.360751148875089,5.166666666666667,31
+ReAct,6,4,66.7,13.102,19.51221261415527,7.5,8.360621986431392,6.5,39
+Tree-of-Thoughts,6,4,66.7,12.352,4.937202595262489,6.5,2.4289915602982237,3.8333333333333335,23

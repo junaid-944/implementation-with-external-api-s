@@ -1,0 +1,40 @@
+strategy,task_id,task_description,final_answer,correct,expected_answer,execution_time,step_count,tool_calls,failure_type,error_message
+ReAct,low_01,Use Wikipedia to find the capital of Australia.,The capital of Australia is Canberra.,True,Canberra,3.038,3,2,,
+ReAct,low_02,Use the calculator to compute: 347 * 29 + 156,The result of the calculation is 10219.,True,10219,1.945,2,1,,
+ReAct,med_01,"Look up the population of Brazil on Wikipedia, then use the calculator to find how many times larger Brazil's population is compared to Portugal's population (approximately 10.3 million). Round to the nearest whole number.",Brazil's population is approximately 20 times larger than Portugal's population.,True,20,3.584,3,2,,
+ReAct,med_02,Search the web for the height of Mount Everest in meters. Then use the calculator to convert that height to feet (multiply by 3.281).,"The height of Mount Everest is 8,848.86 meters, which is approximately 29,033.11 feet.",False,29032,5.63,5,4,wrong_answer,
+ReAct,high_01,Research the following using Wikipedia and web search: Find the populations of India and China. Then find the total area (sq km) of each country. Calculate the population density (people per sq km) for each country and determine which country is more densely populated and by what factor.,"India's population is approximately 1.428 billion (as of April 2023) and its total area is 3,287,263 sq km.
+China's population is approximately 1.404 billion (as of 2025) and its total area is 9,600,000 sq km.
+
+**Population Density:**
+*   **India:** 1,428,000,000 people / 3,287,263 sq km = **434.40 people per sq km**
+*   **China:** 1,404,000,000 people / 9,600,000 sq km = **146.25 people per sq km**
+
+India is more densely populated than China. To find the factor by which India is more densely populated:
+434.40 / 146.25 = **2.97**
+
+Therefore, India is approximately **2.97 times** more densely populated than China.",True,India is more densely populated by a factor of about 3,52.225,24,23,loop,
+ReAct,high_02,"A train travels from City A to City B at 80 km/h and returns at 60 km/h. First, search for the formula for average speed of a round trip (hint: it's the harmonic mean, not the arithmetic mean). Then use the calculator to compute the average speed for the round trip. Finally, if the one-way distance is 240 km, calculate the total travel time in hours.","The average speed for the round trip is calculated using the harmonic mean formula: Average Speed = (2 * v1 * v2) / (v1 + v2).
+Given v1 = 80 km/h and v2 = 60 km/h:
+Average Speed = (2 * 80 * 60) / (80 + 60) = 9600 / 140 = 68.57 km/h (approximately).
+
+The one-way distance is 240 km, so the total distance for the round trip is 2 * 240 km = 480 km.
+Total travel time = Total distance / Average Speed
+Total travel time = 480 km / 68.57 km/h = 7.0 hours.
+
+The average speed for the round trip is approximately 68.57 km/h, and the total travel time is 7.0 hours.",False,"Average speed is about 68.6 km/h, total time is 7 hours",12.187,8,7,wrong_answer,
+Plan-and-Solve,low_01,Use Wikipedia to find the capital of Australia.,The capital of Australia is Canberra.,True,Canberra,7.539,8,2,,
+Plan-and-Solve,low_02,Use the calculator to compute: 347 * 29 + 156,The result of the expression 347 * 29 + 156 is 10219.,True,10219,4.507,5,1,,
+Plan-and-Solve,med_01,"Look up the population of Brazil on Wikipedia, then use the calculator to find how many times larger Brazil's population is compared to Portugal's population (approximately 10.3 million). Round to the nearest whole number.","The current population of Brazil is over 213 million people. When compared to Portugal's population of 10.3 million, Brazil's population is approximately 20.68 times larger. Rounded to the nearest whole number, Brazil's population is about 21 times greater than Portugal's.",True,20,10.082,11,3,,
+Plan-and-Solve,med_02,Search the web for the height of Mount Everest in meters. Then use the calculator to convert that height to feet (multiply by 3.281).,"The height of Mount Everest is 8,848.86 meters, which converts to approximately 29,033.11 feet.",False,29032,8.552,10,3,wrong_answer,
+Plan-and-Solve,high_01,Research the following using Wikipedia and web search: Find the populations of India and China. Then find the total area (sq km) of each country. Calculate the population density (people per sq km) for each country and determine which country is more densely populated and by what factor.,"Based on the calculations, India has a population density of approximately 434.4 people per square kilometer, while China has a population density of approximately 145.83 people per square kilometer. Therefore, India is more densely populated than China, by a factor of approximately 2.98.",True,India is more densely populated by a factor of about 3,35.121,32,11,loop,
+Plan-and-Solve,high_02,"A train travels from City A to City B at 80 km/h and returns at 60 km/h. First, search for the formula for average speed of a round trip (hint: it's the harmonic mean, not the arithmetic mean). Then use the calculator to compute the average speed for the round trip. Finally, if the one-way distance is 240 km, calculate the total travel time in hours.","For a round trip where the outbound journey is 240 km at 80 km/h and the return journey is 240 km at 60 km/h:
+
+1.  The average speed for the entire round trip is approximately 68.57 km/h.
+2.  The total travel time for the round trip is 7 hours.",False,"Average speed is about 68.6 km/h, total time is 7 hours",35.533,28,11,loop,
+Tree-of-Thoughts,low_01,Use Wikipedia to find the capital of Australia.,The capital of Australia is Canberra.,True,Canberra,7.429,5,2,,
+Tree-of-Thoughts,low_02,Use the calculator to compute: 347 * 29 + 156,The result of 347 * 29 + 156 is 10219.,True,10219,10.779,4,1,,
+Tree-of-Thoughts,med_01,"Look up the population of Brazil on Wikipedia, then use the calculator to find how many times larger Brazil's population is compared to Portugal's population (approximately 10.3 million). Round to the nearest whole number.",Brazil's population is approximately 20 times larger than Portugal's population.,True,20,10.523,5,2,,
+Tree-of-Thoughts,med_02,Search the web for the height of Mount Everest in meters. Then use the calculator to convert that height to feet (multiply by 3.281).,"The height of Mount Everest is 8,848.86 meters, which is approximately 29,033.11 feet.",False,29032,8.509,6,3,wrong_answer,
+Tree-of-Thoughts,high_01,Research the following using Wikipedia and web search: Find the populations of India and China. Then find the total area (sq km) of each country. Calculate the population density (people per sq km) for each country and determine which country is more densely populated and by what factor.,"India's population is 1.428 billion, and its area is 3,287,263 sq km, resulting in a population density of 434.40 people per sq km. China's population is approximately 1.425 billion, and its area is 9,600,000 sq km, leading to a population density of 148.44 people per sq km. India is more densely populated than China by a factor of approximately 2.93.",True,India is more densely populated by a factor of about 3,19.662,10,9,,
+Tree-of-Thoughts,high_02,"A train travels from City A to City B at 80 km/h and returns at 60 km/h. First, search for the formula for average speed of a round trip (hint: it's the harmonic mean, not the arithmetic mean). Then use the calculator to compute the average speed for the round trip. Finally, if the one-way distance is 240 km, calculate the total travel time in hours.",The average speed for the round trip is approximately 68.57 km/h. The total travel time for the round trip is 7 hours.,False,"Average speed is about 68.6 km/h, total time is 7 hours",17.212,9,6,wrong_answer,

@@ -1,0 +1,14 @@
+# Python environments
+venv/
+env/
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# MacOS hidden files
+.DS_Store
+
+# Generated results (Optional: uncomment if you don't want to track results)
+# results/

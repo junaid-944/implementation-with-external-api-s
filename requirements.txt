@@ -1,0 +1,12 @@
+langchain
+langchain-google-genai
+langchain-experimental
+langchain-community
+langgraph
+python-dotenv
+requests
+pandas
+numpy
+matplotlib
+seaborn
+jinja2
